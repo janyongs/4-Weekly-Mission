@@ -9,6 +9,7 @@ import { SearchResult } from "@components/folder/SearchResult";
 import { FavoriteList } from "@components/folder/FavoriteList";
 import { TitleBar } from "@/src/components/titlebar/TitleBar";
 import { EmptyList } from "@/src/components/list/EmptyList";
+import { CardContianer, FavoriteCard } from "@/src/components/card/FolderCard";
 const FolderPage = () => {
   const [id, setId] = useState<number | null>(null);
   const [selectItem, setSelectItem] = useState<null | favoriteListDataType>(
@@ -50,6 +51,11 @@ const FolderPage = () => {
         {filteredResults?.length === 0 ? (
           <EmptyList text={"저장된 링크가 없습니다."} />
         ) : null}
+        <CardContianer>
+          {filteredResults?.map((data) => (
+            <FavoriteCard key={id} data={data} selectId={id} />
+          ))}
+        </CardContianer>
       </div>
     </div>
   );

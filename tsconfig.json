@@ -18,14 +18,16 @@
       "@/*": ["./*"],
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/hooks/useGetFolders.js"
+    "src/hooks/useGetFolders.js",
+    "src/assets/utils/convertTime.js"
   ],
   "exclude": ["node_modules"]
 }
