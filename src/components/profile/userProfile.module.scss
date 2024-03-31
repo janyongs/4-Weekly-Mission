@@ -1,0 +1,18 @@
+.profile {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.profileEmail {
+  display: none;
+  font-size: 1.4rem;
+  color: #373740;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}
