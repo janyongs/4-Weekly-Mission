@@ -1,7 +1,7 @@
 import LINK_LOGO from "../../assets/image/link.svg";
 import { useGetFolders } from "../../hooks/useGetFolders";
 import folderInfoStyle from "@components/folder/folderInfo.module.scss";
-import addLinkStyle from "@components/folder/addLink.module.scss";
+import addLinkStyle from "@components/folder/AddLink.module.scss";
 import { AddLinkModal } from "@components/modal/add-link-modal/AddLinkModal";
 import { KeyboardEvent, useState } from "react";
 import Image from "next/image";

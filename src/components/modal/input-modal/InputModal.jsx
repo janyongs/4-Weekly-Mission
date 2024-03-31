@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./InputModal.module.scss";
 import { Modal } from "../Modal";
-import { Input } from "../../input/Input";
+import { Input } from "@components/input/Input";
 import { ModalContentBox } from "../modal-content-box/ModalContentBox";
 import { ModalContentButton } from "../modal-content-button/ModalContentButton";
 import { ModalContentTitle } from "../modal-content-title/ModalContentTitle";

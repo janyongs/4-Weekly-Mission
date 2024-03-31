@@ -3,8 +3,12 @@ import { useState, useEffect } from "react";
 import { favoriteListDataType } from "@/src/types/folderListTypes";
 import { folderListDataType } from "@/src/types/folderListTypes";
 import { useFolderList } from "@/src/hooks/useFolderList";
-import { AddLink } from "@/src/components/folder/addLink";
-
+import { AddLink } from "@/src/components/folder/AddLink";
+import { FolderSearchBar } from "@components/folder/FolderSearchBar";
+import { SearchResult } from "@components/folder/SearchResult";
+import { FavoriteList } from "@components/folder/FavoriteList";
+import { TitleBar } from "@/src/components/titlebar/TitleBar";
+import { EmptyList } from "@/src/components/list/EmptyList";
 const FolderPage = () => {
   const [id, setId] = useState<number | null>(null);
   const [selectItem, setSelectItem] = useState<null | favoriteListDataType>(
@@ -38,7 +42,15 @@ const FolderPage = () => {
   return (
     <div className={styles.container}>
       <AddLink />
-      <div className={styles.wrapper}></div>
+      <div className={styles.wrapper}>
+        <FolderSearchBar handleSearchInput={setSearchInput} />
+        <SearchResult searchInput={searchInput} />
+        <FavoriteList handleChange={handleChangeFolderId} id={id} />
+        <TitleBar selectItem={selectItem} />
+        {filteredResults?.length === 0 ? (
+          <EmptyList text={"저장된 링크가 없습니다."} />
+        ) : null}
+      </div>
     </div>
   );
 };
