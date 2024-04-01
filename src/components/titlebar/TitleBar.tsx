@@ -2,7 +2,7 @@
 import shared from "@assets/image/share.svg";
 import pen from "@assets/image/pen.svg";
 import deleteIcon from "@assets/image/delete.svg";
-import style from "@components/titlebar/titlebar.module.scss";
+import style from "@components/titlebar/Titlebar.module.scss";
 import { AlertModal } from "../modal/alert-modal/AlertModal";
 import { MODALS_ID } from "@components/titlebar/titleConstant";
 import { InputModal } from "@components/modal/input-modal/InputModal";

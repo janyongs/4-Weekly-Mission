@@ -1,6 +1,7 @@
 import DEFAULT_IMAGE from "@assets/image/card-default.png";
 import Image from "next/image";
 import style from "@components/card/FolderCard.module.scss";
+
 interface CardImageType {
   src: string;
   alt: string;

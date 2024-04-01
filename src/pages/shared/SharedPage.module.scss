@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 2rem;
+
+  @media (769px< width < 1124px) {
+    row-gap: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1124px;
+  padding: 0 32px;
+  width: 100%;
+  @media (769px< width < 1124px) {
+    row-gap: 4rem;
+  }
+  @media (width < 769px) {
+    row-gap: 4rem;
+  }
+}
+
+.folderBox {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+
+  @media (769px< width < 1124px) {
+    row-gap: 2.4rem;
+  }
+}

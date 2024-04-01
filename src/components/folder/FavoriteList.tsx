@@ -2,6 +2,7 @@ import style from "@components/folder/FavoriteList.module.scss";
 import { useFavoriteList } from "../../hooks/useFavoriteList";
 import styled from "styled-components";
 import { favoriteListDataType } from "../../types/folderListTypes";
+
 interface IFavoriteButton {
   selected: boolean;
 }

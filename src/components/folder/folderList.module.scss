@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 106rem;
+  row-gap: 2rem;
+  column-gap: 25px;
+
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+  }
+  @media (769px< width < 1124px) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.5rem;
+    column-gap: 2rem;
+  }
+  @media (width < 768px) {
+    grid-template-columns: repeat(auto-fill, 34rem);
+    row-gap: 2.5rem;
+    column-gap: 2rem;
+  }
+}
