@@ -4,6 +4,9 @@ const path = require("path");
 
 const nextConfig = {
   reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+  },
   images: {
     domains: [
       "codeit-front.s3.ap-northeast-2.amazonaws.com",
