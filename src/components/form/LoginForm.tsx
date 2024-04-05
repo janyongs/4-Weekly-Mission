@@ -1,4 +1,4 @@
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import styles from "@components/form/LoginForm.module.scss";
 import { useState, useEffect } from "react";
 import eyeOn from "@assets/image/eye-on.svg";
@@ -9,6 +9,7 @@ import kakao from "@assets/image/kakao.svg";
 import google from "@assets/image/google.svg";
 import { useRouter } from "next/router";
 import { axiosInstance } from "@hooks/axiosInstance";
+
 interface Inputs {
   email: string;
   password: string;

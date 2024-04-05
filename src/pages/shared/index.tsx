@@ -6,6 +6,7 @@ import { useFolder } from "@/src/hooks/useFolder";
 import { FolderSearchBar } from "@/src/components/folder/FolderSearchBar";
 import { SearchResult } from "@/src/components/folder/SearchResult";
 import { FolderList } from "@/src/components/folder/folderList";
+import { getMainLayout } from "@/src/components/layout/mainLayout";
 
 const SharedPage = () => {
   const { folder } = useFolder();
@@ -42,3 +43,4 @@ const SharedPage = () => {
   );
 };
 export default SharedPage;
+SharedPage.getLayout = getMainLayout;

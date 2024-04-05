@@ -1,13 +1,16 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Header } from "@components/header/Header";
-import { Footer } from "../components/footer/Footer";
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <div>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </div>
-  );
+
+import { NextPage } from "next";
+import { ReactNode } from "react";
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactNode) => ReactNode;
+};
+interface AppPropsWithLayout extends AppProps {
+  Component: NextPageWithLayout;
+}
+
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page);
+  return <div>{getLayout(<Component {...pageProps} />)}</div>;
 }

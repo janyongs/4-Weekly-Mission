@@ -10,6 +10,7 @@ import { FavoriteList } from "@components/folder/FavoriteList";
 import { TitleBar } from "@/src/components/titlebar/TitleBar";
 import { EmptyList } from "@/src/components/list/EmptyList";
 import { FavoriteCard } from "@/src/components/card/FolderCard";
+import { getMainLayout } from "@/src/components/layout/mainLayout";
 
 const FolderPage = () => {
   const [id, setId] = useState<number | null>(null);
@@ -67,3 +68,4 @@ const FolderPage = () => {
 };
 
 export default FolderPage;
+FolderPage.getLayout = getMainLayout;
