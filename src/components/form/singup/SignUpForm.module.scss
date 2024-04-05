@@ -1,0 +1,65 @@
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.4rem;
+  position: relative;
+
+  label {
+    margin-bottom: 1.2rem;
+    margin-top: 3rem;
+  }
+
+  input {
+    border-radius: 8px;
+    border: 1px solid var(--gray20);
+    padding: 1.8rem 1.5rem;
+    outline: none;
+
+    &:focus {
+      border-color: var(--primary);
+    }
+  }
+  p {
+    margin-top: 0.5rem;
+    color: var(--red);
+  }
+  button {
+    margin-top: 3rem;
+    background: linear-gradient(91deg, #6d6afe 0.12%, #6ae3fe 101.84%);
+    color: var(--white);
+    padding: 1.6rem 2rem;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    margin-bottom: 3.2rem;
+  }
+}
+.passwordBox {
+  width: 100%;
+  position: relative;
+
+  input {
+    width: 100%;
+  }
+}
+
+.eyeButton {
+  position: absolute;
+  right: 3.5%;
+  top: 55%;
+  transform: translateY(-50%);
+}
+
+.social {
+  display: flex;
+  padding: 1.2rem 2.4rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--gray20);
+  background: var(--gray10);
+  a {
+    margin-left: 1.6rem;
+  }
+}
