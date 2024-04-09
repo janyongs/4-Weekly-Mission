@@ -9,13 +9,11 @@ import eyeOff from "@assets/image/eye-off.svg";
 import { axiosInstance } from "@hooks/axiosInstance";
 import kakao from "@assets/image/kakao.svg";
 import google from "@assets/image/google.svg";
-import { AxiosError } from "axios";
-import { ErrorOption } from "react-hook-form";
+
 interface Inputs {
   email: string;
   password: string;
   passwordCheck: string;
-  // checkEmailExists: number;
 }
 
 export const SignUpForm = () => {
@@ -24,7 +22,6 @@ export const SignUpForm = () => {
     register,
     handleSubmit,
     getValues,
-    setError,
     formState: { isSubmitting, isSubmitted, errors },
   } = useForm<Inputs>({ mode: "onBlur" });
   const [showPassword, setShowPassword] = useState(false);
